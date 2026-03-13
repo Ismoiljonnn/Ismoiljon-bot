@@ -34,7 +34,7 @@ def forward_to_admin(message):
         user_info = f"📩 Yangi xabar!\n\n" \
                     f"👤 Kimdan: {message.from_user.first_name}\n" \
                     f"🆔 ID: {message.from_user.id}\n" \
-                    f"🔗 Username: @{message.from_user.username if message.from_user.username else 'Mavjud emas'}"
+                    f"🔗 Username: @{message.from_user.username if message.from_user.username else '!Mavjud emas'}"
 
         bot.send_message(ADMIN_ID, user_info)
         bot.forward_message(ADMIN_ID, message.chat.id, message.message_id)
